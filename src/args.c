@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <errno.h>
 
+#include "message.h"
 #include "file_reader.h"
 
 #define START_FILE_INDEX 2
@@ -53,8 +54,7 @@ void read_argument(char* argument, Arguments* arguments) {
 
         read_block(file_path, begin, end);
     } else {
-        printf("No arguments founded\n");
-        printf("Use: scat <argument> <files>\n");
+        show_helper_message();
         exit(1);    
     }
 }

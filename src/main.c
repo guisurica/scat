@@ -5,11 +5,11 @@
 
 #include "args.h"
 #include "file_reader.h"
+#include "message.h"
 
 int main(int argc, char** argv) {
     if (argc <= 1) {
-        printf("No arguments founded\n");
-        printf("Use: scat <argument> <files>\n");
+        show_helper_message();
         exit(1);
     }
 
